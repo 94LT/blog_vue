@@ -10,8 +10,26 @@ export default defineComponent({
 <template>
     <div class="cha-main">
         <div class="cha-header">
-            
+            <div class="cha-header-l">
+                <div class="cha-header-l-ava"></div>
+                <div class="cha-header-l-inf">
+                    <div class="cha-header-l-inf-t">
+                        <div class="cha-header-l-inf-name">LT</div>
+                        <div class="cha-header-l-inf-date">1 个月前</div>
+                    </div>
+                    <div class="cha-header-l-inf-b">学习中~~~</div>
+                </div>
+            </div>
+            <div class="cha-header-r">
+                <i class="fas fa-ellipsis-v"></i>
+            </div>
         </div>
+        <div class="cha-content">
+            <div class="cha-content-text">
+                 昨晚本站遭不明人士两个境外IP的CC攻击😂，造成一段时间网站的访问不稳定，现已屏蔽修复。
+            </div>  
+        <img src="../assets/image/chat.png" alt="?0?">         
+        </div>     
     </div>
 </template>
 
@@ -26,8 +44,85 @@ export default defineComponent({
     padding: 6px;
 }
 .cha-header {
-    
+    min-height: 42px;
+    position: relative;
+}
+.cha-header-l {
+    height: 100%;
+    position: absolute;
+    left: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    -webkit-box-align:center;
+    -moz-box-align:center;
+}
+.cha-header-l-ava {
+    width: 36px;
+    height: 36px;
+    background-image: url('../assets/image/ava.jpeg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+.cha-header-l-inf {
+    height: 100%;
+}
+.cha-header-l-inf-t {
+    height: 50%;
+    font-size: 0.75rem;
+    color: #777;
+    white-space:nowrap;
+}
+.cha-header-l-inf-b {
+    height: 50%;
+    font-size: 0.75rem;
+    color: #777;
+    white-space:nowrap;
+    padding: 2px;
+}
+.cha-header-l-inf-name {
+    padding: 2px;
+    font-size: 0.95rem;
+    font-weight:600;
+    color: rgb(54, 53, 53);
+    display:inline;
+    text-shadow: 1px 1px 2px rgb(150, 147, 147);
+}
+.cha-header-l-inf-date {
+    padding: 2px 2px 2px 8px;
+    display:inline;
 }
 
-
+.cha-header-r {
+    position: absolute;
+    right: 12px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+}
+.cha-header-r i{
+    margin: auto;
+    font-size: 0.9rem;
+    color: rgba(121, 120, 120, 0.7);
+}
+.cha-header-r:hover {
+    border-radius: 50%;
+    background-color: rgba(120, 120, 120, 0.2);
+    cursor: pointer;
+}
+.cha-content {
+    padding: 6px;
+}
+.cha-content-text {
+    font-size: 0.8rem;
+    color: rgba(2, 2, 2, 0.87);
+}
+.cha-content img {
+    width: 100%;
+    height: 100%;
+    max-width: 460px;
+    background-color: rgba(201, 197, 197, 0.3);
+    border-radius: 12px;
+}
 </style>

@@ -3,6 +3,7 @@ import { defineComponent, Ref, ref } from 'vue';
 import Recommendation from '@/components/Recommendation.vue';
 import EssayList from '@/components/EssayList.vue';
 import ChatList from '@/components/ChatList.vue';
+import Fish from '@/components/Fish.vue';
 import axios from 'axios'
 import { useRouter } from 'vue-router'
 
@@ -12,6 +13,7 @@ export default defineComponent({
     Recommendation,
     EssayList,
     ChatList,
+    Fish,
   },
   setup() {
 
@@ -41,7 +43,8 @@ export default defineComponent({
           </div>
         </div>
       </div>
-      <div class="grid-con">1</div>
+      <div class="grid-con">
+      </div>
     </div>
   </div>
 </template>

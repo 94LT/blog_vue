@@ -3,7 +3,7 @@ import $ from 'jquery'
 
 var RENDERER = {
     POINT_INTERVAL: 5,
-    FISH_COUNT: 3,
+    FISH_COUNT: 5,
     MAX_INTERVAL_COUNT: 50,
     INIT_HEIGHT_RATE: 0.5,
     THRESHOLD: 50,
@@ -145,7 +145,8 @@ var RENDERER = {
         requestAnimationFrame(this.render);
         this.controlStatus();
         this.context.clearRect(0, 0, this.width, this.height);
-        this.context.fillStyle = 'hsl(0, 0%, 95%)';
+         // 水面颜色
+        this.context.fillStyle = 'hsl(180, 15%, 70%)';
 
         for (var i = 0, count = this.fishes.length; i < count; i++) {
             this.fishes[i].render(this.context);
@@ -346,8 +347,5 @@ $(function () {
 .container {
     width: 100%;
     height: 200px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
 }
 </style>

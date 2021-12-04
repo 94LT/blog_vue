@@ -29,7 +29,17 @@ export default defineComponent({
                  昨晚本站遭不明人士两个境外IP的CC攻击😂，造成一段时间网站的访问不稳定，现已屏蔽修复。
             </div>  
         <img src="../assets/image/chat.png" alt="?0?">         
-        </div>     
+        </div>  
+        <div class="cha-footer">
+            <span>7个喜欢</span>
+            <i class="fas fa-circle-notch"></i>
+            <span>1个评论</span>
+            <div class="cha-footer-btn">
+                <button></button>
+                <button></button>
+                <button></button>
+            </div>
+        </div> 
     </div>
 </template>
 
@@ -104,7 +114,7 @@ export default defineComponent({
 .cha-header-r i{
     margin: auto;
     font-size: 0.9rem;
-    color: rgba(121, 120, 120, 0.7);
+    color: rgba(120, 120, 120, 0.7);
 }
 .cha-header-r:hover {
     border-radius: 50%;
@@ -124,5 +134,26 @@ export default defineComponent({
     max-width: 460px;
     background-color: rgba(201, 197, 197, 0.3);
     border-radius: 12px;
+}
+.cha-footer {
+    padding: 0 6px;
+    font-size: 0.9rem;
+    color: rgba(120, 120, 120, 0.8);
+}
+.cha-footer i{
+    margin: 0 4px;
+    font-size: 0.75rem;
+    color: rgba(13, 13, 13, 0.9);
+}
+.cha-footer-btn {
+    width: 100%;
+    display: flex;
+}
+.cha-footer-btn button{
+    flex: 1;
+    margin: 0 2px;
+    background-color: rgba(201, 197, 197, 0.2);
+    border-style: none;
+    border-radius: 4px;
 }
 </style>

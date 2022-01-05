@@ -99,16 +99,17 @@ export default defineComponent({
 }
 
 /* 响应式布局 - 制作单列布局（100％）而不是两列布局（50％） */
-@media (max-width: 800px) {
-  .flex-item-right,
-  .flex-item-left {
-    flex: 100%;
-  }
+@media screen and (max-width: 800px) {
   .flex-item-con-l {
     padding-right: 0px;
   }
   .flex-item-con-r {
     padding-left: 0px;
   }
+  .flex-item-right,
+  .flex-item-left {
+    flex: 100%;
+  }
+  
 }
 </style>

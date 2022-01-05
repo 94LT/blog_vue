@@ -31,13 +31,22 @@ export default defineComponent({
         <img src="../assets/image/chat.png" alt="?0?">         
         </div>  
         <div class="cha-footer">
-            <span>7个喜欢</span>
-            <i class="fas fa-circle-notch"></i>
-            <span>1个评论</span>
+            <div class="cha-footer-text">
+                <span>7个喜欢</span>
+                <i class="fas fa-circle-notch"></i>
+                <span>1个评论</span>
+            </div>
+            
             <div class="cha-footer-btn">
-                <button></button>
-                <button></button>
-                <button></button>
+                <div class="cha-footer-btn-con">
+                    <div class="cha-footer-btn-heart"> <i class="fas fa-heart"></i> 喜欢</div>
+                </div>
+                <div class="cha-footer-btn-con">
+                    <div><i class="fas fa-comment-dots"></i> 评论</div>
+                </div>
+                <div class="cha-footer-btn-con">
+                    <div><i class="fas fa-share-alt"></i> 转发</div>
+                </div>
             </div>
         </div> 
     </div>
@@ -45,7 +54,7 @@ export default defineComponent({
 
 <style scoped>
 .cha-main {
-    width: auto;
+    width: 100%;
     border-radius: 10px;
     position: relative;
     overflow-x: hidden;
@@ -112,7 +121,6 @@ export default defineComponent({
     align-items: center;
 }
 .cha-header-r i{
-    margin: auto;
     font-size: 0.9rem;
     color: rgba(120, 120, 120, 0.7);
 }
@@ -140,20 +148,65 @@ export default defineComponent({
     font-size: 0.9rem;
     color: rgba(120, 120, 120, 0.8);
 }
+.cha-footer-text {
+    padding: 0 8px;
+}
 .cha-footer i{
     margin: 0 4px;
     font-size: 0.75rem;
     color: rgba(13, 13, 13, 0.9);
 }
 .cha-footer-btn {
+    padding: 12px 0 6px 0;
     width: 100%;
-    display: flex;
+    
 }
-.cha-footer-btn button{
+.cha-footer-btn-con {
     flex: 1;
+    height: 36px;
+    margin: 0 2px;
+    border-radius: 4px;
+    background-color: rgba(201, 197, 197, 0.2);
+   display: flex;
+     justify-content: center;
+    align-items:center;
+}
+
+
+
+.cha-footer-btn-heart{
+    position: absolute;
+    margin: auto;
+}
+.cha-footer-btn-dot{
+    clear:both;
+    display: inline-block;
+    height: 36px;
+    width: 32%;
     margin: 0 2px;
     background-color: rgba(201, 197, 197, 0.2);
     border-style: none;
     border-radius: 4px;
+    text-align:center;
+    display: table-cell;
+    vertical-align:middle;
+}
+.cha-footer-btn-share{
+    clear:both;
+    display: inline-block;
+    height: 36px;
+    width: 32%;
+    margin: 0 2px;
+    background-color: rgba(201, 197, 197, 0.2);
+    border-style: none;
+    border-radius: 4px;
+    text-align:center;
+    display: table-cell;
+    vertical-align:middle;
+}
+.cha-footer-btn- {
+
+    font-size: 0.9rem;
+    color: rgba(120, 120, 120, 0.8);
 }
 </style>

@@ -1,5 +1,6 @@
 <script lang="ts">
 import { defineComponent, Ref, ref } from 'vue';
+import Header from '@/components/Header.vue';
 import Recommendation from '@/components/Recommendation.vue';
 import EssayList from '@/components/EssayList.vue';
 import ChatList from '@/components/ChatList.vue';
@@ -44,6 +45,7 @@ export default defineComponent({
         </div>
       </div>
       <div class="grid-con">
+        <Fish></Fish>
       </div>
     </div>
   </div>

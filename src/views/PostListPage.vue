@@ -4,7 +4,7 @@ import Header from '@/components/Header.vue';
 import SideBar from '@/components/SideBar.vue';
 import PostListOne from '@/components/PostListOne.vue';
 import RightMenu from '@/components/RightMenu.vue'
-import Fish from '@/components/Fish.vue'
+// import Fish from '@/components/Fish.vue'
 import axios from 'axios'
 import { useRouter } from 'vue-router'
 
@@ -15,7 +15,7 @@ export default defineComponent({
     SideBar,
     PostListOne,
     RightMenu,
-    Fish,
+    // Fish,
   },
   setup() {
     const router = useRouter()
@@ -48,7 +48,7 @@ export default defineComponent({
     
   </div>
   <RightMenu />
-  <Fish />
+  <!-- <Fish /> -->
 </template>
 
 

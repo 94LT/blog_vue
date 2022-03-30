@@ -4,7 +4,7 @@ import Header from '@/components/Header.vue';
 import Recommendation from '@/components/Recommendation.vue';
 import EssayList from '@/components/EssayList.vue';
 import ChatList from '@/components/ChatList.vue';
-import Fish from '@/components/Fish.vue';
+// import Fish from '@/components/Fish.vue';
 import axios from 'axios'
 import { useRouter } from 'vue-router'
 
@@ -14,7 +14,8 @@ export default defineComponent({
     Recommendation,
     EssayList,
     ChatList,
-    Fish,
+    Header,
+    // Fish,
   },
   setup() {
 
@@ -25,6 +26,7 @@ export default defineComponent({
 </script>
 
 <template>
+  <Header />
   <div class="main">
     <div class="container">
       <div class="grid-con">
@@ -45,7 +47,7 @@ export default defineComponent({
         </div>
       </div>
       <div class="grid-con">
-        <Fish></Fish>
+        <!-- <Fish></Fish> -->
       </div>
     </div>
   </div>

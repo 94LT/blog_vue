@@ -27,7 +27,7 @@ export default defineComponent({
 
 <template>
   <Header />
-  <div class="main">
+  <div class="main"> 
     <div class="container">
       <div class="grid-con">
         <Recommendation />

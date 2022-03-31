@@ -166,6 +166,7 @@ export default defineComponent({
     color: rgba(13, 13, 13, 0.9);
 }
 .cha-footer-items {
+    cursor: pointer;
     padding: 12px 0 6px 0;
     width: 100%;
     height: 36px;  

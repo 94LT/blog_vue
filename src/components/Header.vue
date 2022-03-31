@@ -5,11 +5,56 @@ import $ from 'jquery'
 export default defineComponent({
   name: 'Header',
 })
+// 导航栏上拉悬浮
+$(function(){
+    //页面初始化的时候，获取滚动条的高度（上次高度）
+    var start_height = $(document).scrollTop();
+    //获取导航栏的高度(包含 padding 和 border)
+    var navigation_height = $('.header-con').outerHeight();
+    $(window).scroll(function() {
+        //触发滚动事件后，滚动条的高度（本次高度）
+        var end_height = $(document).scrollTop();
+        //触发后的高度 与 元素的高度对比
+        if (end_height > navigation_height){
+            $('.header-con').css('top', '-56px');
+        }else {
+            $('.header-con').css('top', '0');
+        }
+        //触发后的高度 与 上次触发后的高度
+        if (end_height < start_height){
+            $('.header-con').css('top', '0');
+        }
+        //再次获取滚动条的高度，用于下次触发事件后的对比
+        start_height = $(document).scrollTop();
+    });
+});
+
 </script>
 
 
 <template>
-  <div class="header-con">q111</div>
+  <div class="header-con">
+    <div class="header-con-l">
+      <div class="header-con-log">
+        <button><a href="">log</a></button>
+      </div>
+    </div>
+    <div class="header-con-m">
+      <div class="header-con-m-c">
+        <div class="header-con-m-i"><button>首页</button></div>
+        <div class="header-con-m-i"><button>碎语</button></div>
+        <div class="header-con-m-i"><button>留言</button></div>
+        <div class="header-con-m-i"><button>阿巴阿巴</button></div>
+      </div>
+    </div>
+    <div class="header-con-r">
+      <div class="header-con-r-c">
+        <div class="header-con-r-fa">
+          <button><i class="far fa-moon"></i></button>
+        </div>     
+      </div>     
+    </div>
+  </div>
   
 </template>
 
@@ -21,6 +66,61 @@ export default defineComponent({
     width: 100%;
     height: 56px;
     background-color: #f4f4f4;
+    display: flex;
+    transition: top .5s;
+  }
+  .header-con-l {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  .header-con-log button{
+    border: none;
+    height: 100%;
+    font-size: 1.75rem;
+    font-weight: 600;
+  }
+  .header-con-m {
+    flex: 3;
+    display: flex;
+    justify-content: center;
+  }
+  .header-con-m-c {
+    width: 60%;
+    display: flex;
+    /* background-color: #f0efef; */
+    align-content: center;
+    justify-content: center;
+  }
+  .header-con-m-c :hover {
+    background-color: #e9e8e8;
+  }
+  .header-con-m-i button{
+    border: none;
+    width: 100%;
+    height: 100%; 
+    font-size: 0.8rem;
+    font-weight: 400;
   }
 
+  .header-con-r {
+    flex: 1;
+    position: relative;
+  }
+  .header-con-r-c {
+    position: absolute;
+    top: 20%;
+    /* text-align: center; */
+  }
+  .header-con-r-fa {
+    cursor: pointer;
+  }
+  .header-con-r-fa button{
+    font-size: 1.25rem;
+    border-style: none;
+    border-radius: 8px;
+  }
+  .header-con-r-fa :hover{
+    background-color: #e9e8e8;
+  }
 </style>

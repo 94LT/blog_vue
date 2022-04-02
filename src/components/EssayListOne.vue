@@ -15,7 +15,7 @@ export default defineComponent({
             <div class="ess-text-date">十二月 17, 2020</div>
             <div
                 class="ess-text-inst"
-            >如果我可以死，在暖风拂动春意的此夜，像不久前白昼在我眼前，被漆夜一点点残忍吞噬掉一样，旋律扭曲在耳梁回环肆无忌惮，月光折射在琉璃间碎散，然后我蒙上眼眸，等候死...</div>
+            >春风不解意，抚花枝，携香而去，独留我相思...</div>
 
             <div class="ess-text-btn">
                 <div class="ess-text-btn-l">开始阅读</div>

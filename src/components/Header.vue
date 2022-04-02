@@ -28,13 +28,33 @@ $(function(){
         start_height = $(document).scrollTop();
     });
 });
+$(function(){
+  
+  if( $(window).width() < 800 ) {		         
+          $('.header-log-l').hide();
+          $('.header-log-m').show(); 	 
+      }else{
+          $('.header-log-l').show();
+          $('.header-log-m').hide();   
+      }
+  $(window).resize(function(){				         //  监控窗口宽度变化
+      if( $(window).width() < 800 ) {		         
+          $('.header-log-l').hide();
+          $('.header-log-m').show(); 	 
+      }else{
+          $('.header-log-l').show();
+          $('.header-log-m').hide();   
+      }
+  });
+});
 
 </script>
 
 
 <template>
   <div class="header-con">
-    <div class="header-con-l">
+    <div class="header-log-l">
+      <div class="header-con-l">
       <div class="header-con-log">
         <button><a href="">log</a></button>
       </div>
@@ -50,9 +70,17 @@ $(function(){
     <div class="header-con-r">
       <div class="header-con-r-c">
         <div class="header-con-r-fa">
-          <button><i class="far fa-moon"></i></button>
+          <button><i class="fas fa-moon"></i></button>
         </div>     
       </div>     
+    </div>
+    </div>
+    <div class="header-log-m">
+        <button><a href="">log</a></button>
+        <div class="header-m-menu-c"><i class="fas fa-bars" ></i></div>
+      <!-- <div class="header-m-menu">
+        <button><i class="fas fa-bars" ></i></button>
+        </div> -->
     </div>
   </div>
   
@@ -66,8 +94,10 @@ $(function(){
     width: 100%;
     height: 56px;
     background-color: #f4f4f4;
-    display: flex;
-    transition: top .5s;
+    transition: top 1s;
+  }
+  .header-log-l {
+    display: flex; 
   }
   .header-con-l {
     flex: 1;
@@ -109,7 +139,7 @@ $(function(){
   }
   .header-con-r-c {
     position: absolute;
-    top: 20%;
+    top: 8px;
     /* text-align: center; */
   }
   .header-con-r-fa {
@@ -122,5 +152,41 @@ $(function(){
   }
   .header-con-r-fa :hover{
     background-color: #e9e8e8;
+  }
+
+  .header-log-m {
+    display: flex;
+    height: 100%;
+  }
+  .header-log-m button{
+    margin: auto;
+    border: none;
+    height: 100%;
+    font-size: 1.75rem;
+    font-weight: 600;
+  }
+  .header-m-menu {
+    position: absolute;
+    height: 100%;
+    right: 6px;
+    display: flex;
+    
+  }
+  .header-m-menu-c{
+    margin: auto;
+    border: none;
+    height: 48px;
+    width: 48px;
+    font-size: 1.25rem;
+    transition: .2s all;
+    box-shadow:
+        inset -7px -7px 12px rgba(255, 255, 255, 0.5),
+        inset 7px 7px 12px rgba(110, 110, 110, 0.4);
+    border-radius: 12px;
+  }
+  .header-m-menu-c :active  {
+    box-shadow:
+            inset -7px -7px 12px rgba(255, 255, 255, .9),
+            inset 7px 7px 12px rgba(0, 0, 0, .4);
   }
 </style>

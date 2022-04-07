@@ -77,10 +77,10 @@ $(function(){
     </div>
     <div class="header-log-m">
         <button><a href="">log</a></button>
-        <div class="header-m-menu-c"><i class="fas fa-bars" ></i></div>
-      <!-- <div class="header-m-menu">
-        <button><i class="fas fa-bars" ></i></button>
-        </div> -->
+        <!-- <div class="header-m-menu-c"><i class="fas fa-bars" ></i></div> -->
+      <div class="header-m-menu">
+        <div class="header-m-menu-i"><i class="fas fa-bars"></i></div>   
+        </div>
     </div>
   </div>
   
@@ -166,27 +166,32 @@ $(function(){
     font-weight: 600;
   }
   .header-m-menu {
+    position: relative;
+    height: 36px;
+    width: 36px;
+    top: 8px;
+    right: 16px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 1px 1px 4px -3px rgb(168, 168, 168), -1px -1px 4px -3px rgb(168, 168, 168),
+    -1px 1px 4px -3px rgb(168, 168, 168),1px -1px 4px -3px rgb(168, 168, 168);
+  }
+   .header-m-menu :active{
+    background-color: #e7e7e7c5;
+   }
+  .header-m-menu-i {
     position: absolute;
-    height: 100%;
-    right: 6px;
-    display: flex;
-    
-  }
-  .header-m-menu-c{
-    margin: auto;
-    border: none;
-    height: 48px;
-    width: 48px;
+    width: 36px;
+    height: 36px;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
     font-size: 1.25rem;
-    transition: .2s all;
-    box-shadow:
-        inset -7px -7px 12px rgba(255, 255, 255, 0.5),
-        inset 7px 7px 12px rgba(110, 110, 110, 0.4);
-    border-radius: 12px;
   }
-  .header-m-menu-c :active  {
-    box-shadow:
-            inset -7px -7px 12px rgba(255, 255, 255, .9),
-            inset 7px 7px 12px rgba(0, 0, 0, .4);
+  .header-m-menu-i i {
+    margin-top: 8px;
   }
+
 </style>

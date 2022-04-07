@@ -177,7 +177,7 @@ $(function(){
     box-shadow: 1px 1px 4px -3px rgb(168, 168, 168), -1px -1px 4px -3px rgb(168, 168, 168),
     -1px 1px 4px -3px rgb(168, 168, 168),1px -1px 4px -3px rgb(168, 168, 168);
   }
-   .header-m-menu :active{
+   .header-m-menu :hover{
     background-color: #e7e7e7c5;
    }
   .header-m-menu-i {

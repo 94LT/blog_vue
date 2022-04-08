@@ -38,7 +38,7 @@ export default defineComponent({
 
 <style scoped>
 .recommendation {
-    width: 100%;
+    width: 101%;
 }
 .rec-col {
     height: 66px;

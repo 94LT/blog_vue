@@ -102,7 +102,7 @@ $(function(){
   .header-con-l {
     flex: 1;
     display: flex;
-    justify-content: center;
+    justify-content: end;
   }
   .header-con-log button{
     border: none;
